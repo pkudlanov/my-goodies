@@ -1,0 +1,106 @@
+{
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	"Print to console": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1');",
+			"$2"
+		],
+		"description": "Log output to console"
+	},
+
+	"html highlighting": {
+		"prefix": "/html",
+		"body": [
+			"/*html*/ `",
+			"\t$1",
+			"`;"
+		],
+		"description": "html hightlighting comment for the extension"
+	},
+
+	"vanilla compnent": {
+		"prefix": "comp",
+		"body": [
+			"import Component from '../Component.js';",
+			"",
+			"class ${1:NewComponent} extends Component {",
+			"\trenderTemplate() {",
+			"\t\treturn /*html*/ `",
+			"\t\t\t$0",
+			"\t\t`;",
+			"\t}",
+			"}",
+			"",
+			"export default ${1:NewComponent};"
+		],
+		"description": "New component snippent"
+	},
+
+	"tdd QUnit test": {
+		"prefix": "QUnit",
+		"body": [
+			"",
+			"const test = QUnit.test;",
+			"",
+			"QUnit.module('${1:test module name}');",
+			"",
+			"test('${2:test description}', assert => {",
+				"\t// arrange",
+				"\tconst expected = ${3:Expected};",
+				"",
+				"\t// act",
+				"\tconst result = 'Expected';",
+				"",
+				"\t// assert",
+				"\tassert.htmlEqual(result, expected);",
+			"});"
+		],
+		"description": "Code snippet for a brand spanking new QUnit tdd test!!!!"
+	},
+
+	"tdd test": {
+		"prefix": "test",
+		"body": [
+			"test('${1:test description}', assert => {",
+				"\t// arrange",
+				"\tconst expected = ${2:Expected};",
+				"",
+				"\t// act",
+				"\tconst result = 'Expected';",
+				"",
+				"\t// assert",
+				"\tassert.htmlEqual(result, expected);",
+			"});"
+		],
+		"description": "Code snippet for a new test in the same module."
+	},
+
+	"tdd node test module": {
+		"prefix": "describe",
+		"body": [
+			"const { ${1:function} } = require('${2:function_location}');",
+			"",
+			"describe('${3:module description}', () => {",
+				"\t$0",
+			"});",
+			""
+		]
+	},
+
+	"tdd node test": {
+		"prefix": "it",
+		"body": [
+			"it('${1:test description}', () => {",
+				"\tconst ${2:function_parameter} = 14;",
+				"\tconst result = ${3:function}(${2:function_parameter});",
+				"\texpect(result).toEqual(${4:expected_result});",
+			"});"
+		],
+		"description": "Code snippet for a new node test in the same module."
+	}
+}
