@@ -87,6 +87,9 @@ alias nrv='npm run validate -s --'
 alias rmn='rm -rf node_modules'
 alias flush-npm='rm -rf node_modules && npm i && echo NPM is done'
 
+## jupyter notebook aliases
+alias jn='/Users/pavelkudlanov/opt/anaconda3/bin/jupyter_mac.command ; exit;' # starts jn server in . directory
+
 ## custom functions
 ### get the url of the changes that have just been pushed
 gpr() {
